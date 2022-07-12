@@ -1,0 +1,6 @@
+<h1>Bookmark the movie in a list</h1>
+
+<% simple_form_for [ @movie, @bookmark ] do |f| %>
+  <%= f.input :comment %>
+  <%= f.submit "Bookmark", class: "btn btn-dark" %>
+<% end %>

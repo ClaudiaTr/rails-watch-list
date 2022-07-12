@@ -7,9 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Cleaning database ..."
 Movie.destroy_all
+List.destroy_all
 
 puts "Database clean"
-puts "creating movies ..."
+puts "Creating movies ..."
 
 20.times do
   movie = Movie.create!(
@@ -19,4 +20,20 @@ puts "creating movies ..."
     rating: rand(0..5)
   )
   puts "Created movie #{movie.title}"
+end
+
+puts "Creating lists ..."
+
+rand(3..5).times do
+  list = List.create!(
+    name: Faker::Adjective.positive,
+  )
+  puts "Created list #{list.name}"
+end
+
+rand(3..5).times do
+  list = List.create!(
+    name: Faker::Adjective.negative,
+  )
+  puts "Created list #{list.name}"
 end
