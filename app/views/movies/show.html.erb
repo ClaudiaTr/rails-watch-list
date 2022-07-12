@@ -1,0 +1,9 @@
+<h1><%= @movie.title %>  <%= "*" * @movie.rating %></h1>
+<h3><%= @movie.overview %></h3>
+<img src="<%= @movie.poster_url %>" alt="TODO: there should be a picture here">
+
+<p>
+  <%= link_to "Back", movies_path, class: "m-2 btn-sm btn-dark"  %>
+  <%# <%= link_to "Edit", edit_movie_path(@movie), class: "m-2 btn-sm btn-dark" %> %>
+  <%# <%= link_to "Delete", ???, class: "m-2 btn-sm btn-dark" %> %>
+</p>
